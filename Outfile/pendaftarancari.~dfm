@@ -1,0 +1,464 @@
+object fpendaftarancari: Tfpendaftarancari
+  Left = 388
+  Top = 118
+  Width = 396
+  Height = 514
+  BorderIcons = [biSystemMenu]
+  Caption = 'Pencarian Data'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -13
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  FormStyle = fsStayOnTop
+  OldCreateOrder = False
+  Position = poMainFormCenter
+  Visible = True
+  OnClose = FormClose
+  OnShow = FormShow
+  DesignSize = (
+    388
+    480)
+  PixelsPerInch = 96
+  TextHeight = 16
+  object Label10: TLabel
+    Left = 26
+    Top = 409
+    Width = 135
+    Height = 16
+    Caption = 'Tanggal Pengukuhan :'
+    Transparent = True
+  end
+  object lblpenanda: TLabel
+    Left = 288
+    Top = 416
+    Width = 7
+    Height = 16
+    Caption = '0'
+    Visible = False
+  end
+  object cxGroupBox1: TcxGroupBox
+    Left = 12
+    Top = 5
+    Anchors = [akLeft, akTop, akRight]
+    Caption = '  N.P.W.P/R.D '
+    Style.BorderStyle = ebsOffice11
+    Style.LookAndFeel.Kind = lfOffice11
+    StyleDisabled.LookAndFeel.Kind = lfOffice11
+    StyleFocused.LookAndFeel.Kind = lfOffice11
+    StyleHot.LookAndFeel.Kind = lfOffice11
+    TabOrder = 0
+    DesignSize = (
+      365
+      159)
+    Height = 159
+    Width = 365
+    object Label1: TLabel
+      Left = 16
+      Top = 24
+      Width = 82
+      Height = 16
+      Caption = 'No NPWPRD'
+      Transparent = True
+    end
+    object Label8: TLabel
+      Left = 16
+      Top = 52
+      Width = 73
+      Height = 16
+      Caption = 'Penerimaan'
+      Transparent = True
+    end
+    object Label9: TLabel
+      Left = 16
+      Top = 80
+      Width = 59
+      Height = 16
+      Caption = 'Golongan'
+      Transparent = True
+    end
+    object Label11: TLabel
+      Left = 18
+      Top = 112
+      Width = 80
+      Height = 16
+      Caption = 'Badan usaha'
+      Transparent = True
+    end
+    object nomor: TcxTextEdit
+      Left = 145
+      Top = 20
+      Anchors = [akLeft, akTop, akRight]
+      Properties.CharCase = ecUpperCase
+      Properties.MaxLength = 100
+      Style.LookAndFeel.Kind = lfFlat
+      StyleDisabled.LookAndFeel.Kind = lfFlat
+      StyleFocused.LookAndFeel.Kind = lfFlat
+      StyleHot.LookAndFeel.Kind = lfFlat
+      TabOrder = 0
+      Width = 209
+    end
+    object lookbu: TcxLookupComboBox
+      Left = 145
+      Top = 110
+      Anchors = [akLeft, akTop, akRight]
+      Properties.KeyFieldNames = 'KDBU'
+      Properties.ListColumns = <
+        item
+          FieldName = 'NMBU'
+        end>
+      Properties.ListSource = dsbadanusaha
+      Style.LookAndFeel.Kind = lfFlat
+      StyleDisabled.LookAndFeel.Kind = lfFlat
+      StyleFocused.LookAndFeel.Kind = lfFlat
+      StyleHot.LookAndFeel.Kind = lfFlat
+      TabOrder = 1
+      Width = 209
+    end
+    object lookjenis: TComboBox
+      Left = 146
+      Top = 51
+      Width = 145
+      Height = 24
+      ItemHeight = 16
+      TabOrder = 2
+      Items.Strings = (
+        'P'
+        'R')
+    end
+    object lookgol: TComboBox
+      Left = 147
+      Top = 81
+      Width = 145
+      Height = 24
+      ItemHeight = 16
+      TabOrder = 3
+      Items.Strings = (
+        '1'
+        '2'
+        '3'
+        '4')
+    end
+  end
+  object cxGroupBox2: TcxGroupBox
+    Left = 12
+    Top = 169
+    Anchors = [akLeft, akTop, akRight]
+    Caption = ' Pemilik / Pribadi'
+    Style.BorderStyle = ebsOffice11
+    Style.LookAndFeel.Kind = lfOffice11
+    StyleDisabled.LookAndFeel.Kind = lfOffice11
+    StyleFocused.LookAndFeel.Kind = lfOffice11
+    StyleHot.LookAndFeel.Kind = lfOffice11
+    TabOrder = 1
+    DesignSize = (
+      365
+      116)
+    Height = 116
+    Width = 365
+    object Label2: TLabel
+      Left = 16
+      Top = 24
+      Width = 37
+      Height = 16
+      Caption = 'Nama'
+      Transparent = True
+    end
+    object Label5: TLabel
+      Left = 16
+      Top = 52
+      Width = 68
+      Height = 16
+      Caption = 'Kecamatan'
+      Transparent = True
+    end
+    object Label6: TLabel
+      Left = 16
+      Top = 80
+      Width = 60
+      Height = 16
+      Caption = 'Kelurahan'
+      Transparent = True
+    end
+    object nama: TcxTextEdit
+      Left = 145
+      Top = 20
+      Anchors = [akLeft, akTop, akRight]
+      Style.LookAndFeel.Kind = lfFlat
+      StyleDisabled.LookAndFeel.Kind = lfFlat
+      StyleFocused.LookAndFeel.Kind = lfFlat
+      StyleHot.LookAndFeel.Kind = lfFlat
+      TabOrder = 0
+      Width = 209
+    end
+    object lookkec: TcxLookupComboBox
+      Left = 145
+      Top = 49
+      Anchors = [akLeft, akTop, akRight]
+      Properties.KeyFieldNames = 'KEC'
+      Properties.ListColumns = <
+        item
+          FieldName = 'NMKEC'
+        end>
+      Properties.ListSource = dskecamatan
+      Properties.OnChange = lookkecPropertiesChange
+      Style.LookAndFeel.Kind = lfFlat
+      StyleDisabled.LookAndFeel.Kind = lfFlat
+      StyleFocused.LookAndFeel.Kind = lfFlat
+      StyleHot.LookAndFeel.Kind = lfFlat
+      TabOrder = 1
+      Width = 209
+    end
+    object lookkel: TcxLookupComboBox
+      Left = 145
+      Top = 78
+      Anchors = [akLeft, akTop, akRight]
+      Properties.KeyFieldNames = 'KEL'
+      Properties.ListColumns = <
+        item
+          FieldName = 'NMKEL'
+        end>
+      Properties.ListSource = dskelurahan
+      Style.LookAndFeel.Kind = lfFlat
+      StyleDisabled.LookAndFeel.Kind = lfFlat
+      StyleFocused.LookAndFeel.Kind = lfFlat
+      StyleHot.LookAndFeel.Kind = lfFlat
+      TabOrder = 2
+      Width = 209
+    end
+  end
+  object cxGroupBox3: TcxGroupBox
+    Left = 12
+    Top = 293
+    Anchors = [akLeft, akTop, akRight]
+    Caption = ' Badan Usaha '
+    Style.BorderStyle = ebsOffice11
+    Style.LookAndFeel.Kind = lfOffice11
+    StyleDisabled.LookAndFeel.Kind = lfOffice11
+    StyleFocused.LookAndFeel.Kind = lfOffice11
+    StyleHot.LookAndFeel.Kind = lfOffice11
+    TabOrder = 2
+    DesignSize = (
+      365
+      116)
+    Height = 116
+    Width = 365
+    object Label3: TLabel
+      Left = 16
+      Top = 24
+      Width = 37
+      Height = 16
+      Caption = 'Nama'
+      Transparent = True
+    end
+    object Label4: TLabel
+      Left = 16
+      Top = 52
+      Width = 68
+      Height = 16
+      Caption = 'Kecamatan'
+      Transparent = True
+    end
+    object Label7: TLabel
+      Left = 16
+      Top = 80
+      Width = 60
+      Height = 16
+      Caption = 'Kelurahan'
+      Transparent = True
+    end
+    object namabu: TcxTextEdit
+      Left = 145
+      Top = 20
+      Anchors = [akLeft, akTop, akRight]
+      Style.LookAndFeel.Kind = lfFlat
+      StyleDisabled.LookAndFeel.Kind = lfFlat
+      StyleFocused.LookAndFeel.Kind = lfFlat
+      StyleHot.LookAndFeel.Kind = lfFlat
+      TabOrder = 0
+      Width = 209
+    end
+    object lookkecbu: TcxLookupComboBox
+      Left = 145
+      Top = 49
+      Anchors = [akLeft, akTop, akRight]
+      Properties.KeyFieldNames = 'KEC'
+      Properties.ListColumns = <
+        item
+          FieldName = 'NMKEC'
+        end>
+      Properties.ListSource = dskecamatanbu
+      Properties.OnChange = cxLookupComboBox3PropertiesChange
+      Style.LookAndFeel.Kind = lfFlat
+      StyleDisabled.LookAndFeel.Kind = lfFlat
+      StyleFocused.LookAndFeel.Kind = lfFlat
+      StyleHot.LookAndFeel.Kind = lfFlat
+      TabOrder = 1
+      Width = 209
+    end
+    object lookkelbu: TcxLookupComboBox
+      Left = 145
+      Top = 78
+      Anchors = [akLeft, akTop, akRight]
+      Properties.KeyFieldNames = 'KEL'
+      Properties.ListColumns = <
+        item
+          FieldName = 'NMKEL'
+        end>
+      Properties.ListSource = dskelurahanbu
+      Style.LookAndFeel.Kind = lfFlat
+      StyleDisabled.LookAndFeel.Kind = lfFlat
+      StyleFocused.LookAndFeel.Kind = lfFlat
+      StyleHot.LookAndFeel.Kind = lfFlat
+      TabOrder = 2
+      Width = 209
+    end
+  end
+  object btreset: TcxButton
+    Left = 12
+    Top = 446
+    Width = 75
+    Height = 25
+    Caption = '&Reset'
+    Enabled = False
+    TabOrder = 3
+    OnClick = btresetClick
+    LookAndFeel.Kind = lfOffice11
+  end
+  object btcari: TcxButton
+    Left = 88
+    Top = 446
+    Width = 75
+    Height = 25
+    Caption = '&Cari'
+    TabOrder = 4
+    OnClick = btcariClick
+    LookAndFeel.Kind = lfOffice11
+  end
+  object btkeluar: TcxButton
+    Left = 303
+    Top = 446
+    Width = 75
+    Height = 25
+    Anchors = [akTop, akRight]
+    Caption = '&Keluar'
+    TabOrder = 5
+    OnClick = btkeluarClick
+    LookAndFeel.Kind = lfOffice11
+  end
+  object cxButton1: TcxButton
+    Left = 164
+    Top = 446
+    Width = 75
+    Height = 25
+    Caption = '&Cetak'
+    TabOrder = 6
+    Visible = False
+    OnClick = cxButton1Click
+    LookAndFeel.Kind = lfOffice11
+  end
+  object lookdate: TcxDateEdit
+    Left = 157
+    Top = 406
+    Properties.DateOnError = deNull
+    Properties.SaveTime = False
+    Properties.ShowTime = False
+    Style.LookAndFeel.Kind = lfFlat
+    StyleDisabled.LookAndFeel.Kind = lfFlat
+    StyleFocused.LookAndFeel.Kind = lfFlat
+    StyleHot.LookAndFeel.Kind = lfFlat
+    TabOrder = 7
+    Width = 121
+  end
+  object zqkecamatan: TZQuery
+    Connection = formutama.conn_record
+    Active = True
+    ReadOnly = True
+    SQL.Strings = (
+      'select nmkec,kec from tabkec')
+    Params = <>
+    Left = 148
+    Top = 253
+  end
+  object zqkelurahan: TZQuery
+    Connection = formutama.conn_record
+    ReadOnly = True
+    SQL.Strings = (
+      'select nmkel,kec,kel from tabkel ')
+    Params = <>
+    DataSource = dskecamatan
+    Left = 180
+    Top = 253
+  end
+  object zqkecamatanbu: TZQuery
+    Connection = formutama.conn_record
+    Active = True
+    ReadOnly = True
+    SQL.Strings = (
+      'select nmkec,kec from tabkec'
+      '')
+    Params = <>
+    Left = 212
+    Top = 253
+  end
+  object zqkelurahanbu: TZQuery
+    Connection = formutama.conn_record
+    Active = True
+    ReadOnly = True
+    SQL.Strings = (
+      'select nmkel,kec,kel from tabkel ')
+    Params = <>
+    DataSource = dskecamatanbu
+    Left = 244
+    Top = 253
+  end
+  object dskecamatan: TDataSource
+    DataSet = zqkecamatan
+    Left = 148
+    Top = 285
+  end
+  object dskelurahan: TDataSource
+    DataSet = zqkelurahan
+    Left = 180
+    Top = 285
+  end
+  object dskecamatanbu: TDataSource
+    DataSet = zqkecamatanbu
+    Left = 212
+    Top = 285
+  end
+  object dskelurahanbu: TDataSource
+    DataSet = zqkelurahanbu
+    Left = 244
+    Top = 285
+  end
+  object ZQbadanusaha: TZQuery
+    Connection = formutama.conn_record
+    Active = True
+    ReadOnly = True
+    SQL.Strings = (
+      'select kdbu,nmbu from tabbdu')
+    Params = <>
+    DataSource = dskecamatanbu
+    Left = 132
+    Top = 109
+  end
+  object dsbadanusaha: TDataSource
+    DataSet = ZQbadanusaha
+    Left = 132
+    Top = 141
+  end
+  object ZQuery1: TZQuery
+    Connection = formutama.conn_record
+    Active = True
+    ReadOnly = True
+    SQL.Strings = (
+      
+        'SELECT wpr.PR,wpr.NOPOK,wpr.GOL,wpr.BNAMA,wpr.BAL,wpr.BKEC,wpr.B' +
+        'KEL,bbu FROM wpr where  wpr.BNAMA = '#39'FISIPOL UGM'#39)
+    Params = <>
+    Left = 124
+    Top = 341
+  end
+end

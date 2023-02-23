@@ -1,0 +1,813 @@
+object FormPendataanHotel: TFormPendataanHotel
+  Left = 154
+  Top = 19
+  BorderStyle = bsNone
+  Caption = 'Pendataan Hotel'
+  ClientHeight = 640
+  ClientWidth = 1020
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  FormStyle = fsMDIChild
+  OldCreateOrder = False
+  Position = poDefault
+  Visible = True
+  WindowState = wsMaximized
+  OnClose = FormClose
+  PixelsPerInch = 96
+  TextHeight = 13
+  object ScrollBox1: TScrollBox
+    Left = 0
+    Top = 0
+    Width = 1020
+    Height = 611
+    Align = alClient
+    BevelOuter = bvNone
+    Color = clMoneyGreen
+    ParentColor = False
+    TabOrder = 0
+    DesignSize = (
+      999
+      607)
+    object Panel5: TPanel
+      Left = 23
+      Top = 23
+      Width = 959
+      Height = 746
+      Anchors = [akLeft, akTop, akRight]
+      BevelOuter = bvNone
+      Color = clWhite
+      TabOrder = 0
+      DesignSize = (
+        959
+        746)
+      object cxGroupBox2: TcxGroupBox
+        Left = 24
+        Top = 154
+        Anchors = [akLeft, akTop, akRight]
+        Caption = 'Data Wajib Pajak'
+        Style.BorderStyle = ebsFlat
+        Style.LookAndFeel.Kind = lfOffice11
+        Style.LookAndFeel.SkinName = 'Caramel'
+        Style.LookAndFeel.SkinName = 'Caramel'
+        StyleDisabled.LookAndFeel.Kind = lfOffice11
+        StyleDisabled.LookAndFeel.SkinName = 'Caramel'
+        StyleDisabled.LookAndFeel.SkinName = 'Caramel'
+        StyleFocused.LookAndFeel.Kind = lfOffice11
+        StyleFocused.LookAndFeel.SkinName = 'Caramel'
+        StyleFocused.LookAndFeel.SkinName = 'Caramel'
+        StyleHot.LookAndFeel.Kind = lfOffice11
+        StyleHot.LookAndFeel.SkinName = 'Caramel'
+        StyleHot.LookAndFeel.SkinName = 'Caramel'
+        TabOrder = 1
+        Height = 168
+        Width = 911
+        object Label1: TLabel
+          Left = 40
+          Top = 35
+          Width = 28
+          Height = 13
+          Caption = 'Nama'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -12
+          Font.Name = 'MS Sans Serif'
+          Font.Style = []
+          ParentFont = False
+          Transparent = True
+        end
+        object Label4: TLabel
+          Left = 40
+          Top = 65
+          Width = 32
+          Height = 13
+          Caption = 'Alamat'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -12
+          Font.Name = 'MS Sans Serif'
+          Font.Style = []
+          ParentFont = False
+          Transparent = True
+          WordWrap = True
+        end
+        object LblSptnama: TLabel
+          Left = 177
+          Top = 39
+          Width = 61
+          Height = 13
+          Caption = 'SPT Nama'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = [fsBold]
+          ParentFont = False
+          Transparent = True
+        end
+        object LblSptalamat: TLabel
+          Left = 176
+          Top = 73
+          Width = 83
+          Height = 13
+          Caption = 'Tanggal Pajak'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = [fsBold]
+          ParentFont = False
+          Transparent = True
+        end
+        object Label13: TLabel
+          Left = 40
+          Top = 105
+          Width = 38
+          Height = 13
+          Caption = 'No SPT'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -12
+          Font.Name = 'MS Sans Serif'
+          Font.Style = []
+          ParentFont = False
+          Transparent = True
+        end
+        object Label5: TLabel
+          Left = 40
+          Top = 137
+          Width = 63
+          Height = 13
+          Caption = 'Tanggal SPT'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -12
+          Font.Name = 'MS Sans Serif'
+          Font.Style = []
+          ParentFont = False
+          Transparent = True
+        end
+        object cxDateSPT: TcxDateEdit
+          Left = 176
+          Top = 136
+          Style.BorderStyle = ebsFlat
+          TabOrder = 1
+          Width = 177
+        end
+        object cxDBTextEdit1: TcxDBTextEdit
+          Left = 176
+          Top = 103
+          DataBinding.DataField = 'NOSPT'
+          DataBinding.DataSource = dsdata
+          Style.BorderStyle = ebsFlat
+          Style.Color = clCream
+          TabOrder = 0
+          Width = 175
+        end
+      end
+      object cxGroupBox1: TcxGroupBox
+        Left = 25
+        Top = 329
+        Anchors = [akLeft, akTop, akRight]
+        Caption = 'Data Perhitungan '
+        Style.BorderStyle = ebsFlat
+        Style.LookAndFeel.Kind = lfOffice11
+        Style.LookAndFeel.SkinName = 'Caramel'
+        Style.LookAndFeel.SkinName = 'Caramel'
+        StyleDisabled.LookAndFeel.Kind = lfOffice11
+        StyleDisabled.LookAndFeel.SkinName = 'Caramel'
+        StyleDisabled.LookAndFeel.SkinName = 'Caramel'
+        StyleFocused.LookAndFeel.Kind = lfOffice11
+        StyleFocused.LookAndFeel.SkinName = 'Caramel'
+        StyleFocused.LookAndFeel.SkinName = 'Caramel'
+        StyleHot.LookAndFeel.Kind = lfOffice11
+        StyleHot.LookAndFeel.SkinName = 'Caramel'
+        StyleHot.LookAndFeel.SkinName = 'Caramel'
+        TabOrder = 2
+        Visible = False
+        Height = 234
+        Width = 911
+        object Label2: TLabel
+          Left = 40
+          Top = 36
+          Width = 74
+          Height = 13
+          Caption = 'Penjualan/ Hari'
+          Transparent = True
+        end
+        object Label3: TLabel
+          Left = 40
+          Top = 70
+          Width = 85
+          Height = 13
+          Caption = 'Penjualan / Bulan'
+          Transparent = True
+          WordWrap = True
+        end
+        object Label9: TLabel
+          Left = 40
+          Top = 100
+          Width = 65
+          Height = 13
+          Caption = 'Tanggal Awal'
+          Transparent = True
+        end
+        object Label19: TLabel
+          Left = 416
+          Top = 70
+          Width = 54
+          Height = 13
+          Caption = 'Keringanan'
+          Transparent = True
+        end
+        object Label24: TLabel
+          Left = 176
+          Top = 131
+          Width = 57
+          Height = 13
+          Caption = 'Pembukuan'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -12
+          Font.Name = 'MS Sans Serif'
+          Font.Style = []
+          ParentFont = False
+          Transparent = True
+        end
+        object Label26: TLabel
+          Left = 416
+          Top = 100
+          Width = 81
+          Height = 13
+          Caption = 'Tanggal Berakhir'
+          Transparent = True
+        end
+        object Label28: TLabel
+          Left = 416
+          Top = 36
+          Width = 53
+          Height = 13
+          Caption = 'Jumlah hari'
+          Transparent = True
+        end
+        object Label10: TLabel
+          Left = 323
+          Top = 131
+          Width = 18
+          Height = 13
+          Caption = 'Kas'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -12
+          Font.Name = 'MS Sans Serif'
+          Font.Style = []
+          ParentFont = False
+          Transparent = True
+        end
+        object Label11: TLabel
+          Left = 420
+          Top = 131
+          Width = 23
+          Height = 13
+          Caption = 'Nota'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -12
+          Font.Name = 'MS Sans Serif'
+          Font.Style = []
+          ParentFont = False
+          Transparent = True
+        end
+        object Label14: TLabel
+          Left = 40
+          Top = 158
+          Width = 88
+          Height = 13
+          Caption = 'Bunga SPT   RP  :'
+          Transparent = True
+        end
+        object Label7: TLabel
+          Left = 568
+          Top = 68
+          Width = 8
+          Height = 13
+          Caption = '%'
+          Transparent = True
+        end
+        object Label8: TLabel
+          Left = 40
+          Top = 202
+          Width = 87
+          Height = 13
+          Caption = 'Pajak            RP  :'
+          Transparent = True
+        end
+        object lookusahabu: TcxDBLookupComboBox
+          Left = 905
+          Top = 236
+          BeepOnEnter = False
+          DataBinding.DataField = 'trefusaha_kode'
+          Properties.CharCase = ecUpperCase
+          Properties.DropDownRows = 5
+          Properties.DropDownWidth = 400
+          Properties.KeyFieldNames = 'trefusaha_kode'
+          Properties.ListColumns = <
+            item
+              Caption = 'Kode'
+              Fixed = True
+              FieldName = 'trefusaha_kode'
+            end
+            item
+              Caption = 'Pilih Jenis'
+              FieldName = 'trefusaha_uraian'
+            end>
+          Properties.ListOptions.ShowHeader = False
+          Properties.ListOptions.SyncMode = True
+          Properties.MaxLength = 0
+          Style.BorderStyle = ebsFlat
+          Style.Color = clWhite
+          Style.ButtonStyle = btsDefault
+          Style.ButtonTransparency = ebtNone
+          TabOrder = 3
+          Visible = False
+          Width = 82
+        end
+        object cxDBLookupComboBox1: TcxDBLookupComboBox
+          Left = 990
+          Top = 235
+          BeepOnEnter = False
+          DataBinding.DataField = 'trefusaha_kode'
+          ParentColor = True
+          Properties.CharCase = ecUpperCase
+          Properties.DropDownListStyle = lsEditList
+          Properties.DropDownRows = 1
+          Properties.DropDownWidth = 400
+          Properties.KeyFieldNames = 'trefusaha_kode'
+          Properties.ListColumns = <
+            item
+              Caption = 'Pilih Jenis'
+              FieldName = 'trefusaha_uraian'
+            end>
+          Properties.ListOptions.ShowHeader = False
+          Properties.ListOptions.SyncMode = True
+          Properties.MaxLength = 0
+          Properties.ReadOnly = True
+          Style.BorderStyle = ebsUltraFlat
+          Style.ButtonStyle = btsDefault
+          Style.ButtonTransparency = ebtHideInactive
+          TabOrder = 12
+          Visible = False
+          Width = 495
+        end
+        object cxDBComboBox3: TcxDBComboBox
+          Left = 247
+          Top = 131
+          DataBinding.DataField = 'BUKU'
+          DataBinding.DataSource = dsdata
+          Properties.Items.Strings = (
+            'B')
+          Properties.MaxLength = 0
+          Style.LookAndFeel.Kind = lfFlat
+          StyleDisabled.LookAndFeel.Kind = lfFlat
+          StyleFocused.LookAndFeel.Kind = lfFlat
+          StyleHot.LookAndFeel.Kind = lfFlat
+          TabOrder = 7
+          Width = 49
+        end
+        object cxDBComboBox4: TcxDBComboBox
+          Left = 354
+          Top = 131
+          DataBinding.DataField = 'KAS'
+          DataBinding.DataSource = dsdata
+          Properties.Items.Strings = (
+            'K'
+            'R')
+          Properties.MaxLength = 0
+          Style.LookAndFeel.Kind = lfFlat
+          StyleDisabled.LookAndFeel.Kind = lfFlat
+          StyleFocused.LookAndFeel.Kind = lfFlat
+          StyleHot.LookAndFeel.Kind = lfFlat
+          TabOrder = 8
+          Width = 49
+        end
+        object cxDBComboBox5: TcxDBComboBox
+          Left = 459
+          Top = 131
+          DataBinding.DataField = 'NOTA'
+          DataBinding.DataSource = dsdata
+          Properties.Items.Strings = (
+            'N')
+          Properties.MaxLength = 0
+          Style.LookAndFeel.Kind = lfFlat
+          StyleDisabled.LookAndFeel.Kind = lfFlat
+          StyleFocused.LookAndFeel.Kind = lfFlat
+          StyleHot.LookAndFeel.Kind = lfFlat
+          TabOrder = 9
+          Width = 49
+        end
+        object edbbungaspt: TcxDBCurrencyEdit
+          Left = 175
+          Top = 160
+          DataBinding.DataField = 'BUNGARP'
+          DataBinding.DataSource = dsdata
+          Style.BorderStyle = ebsFlat
+          TabOrder = 10
+          Width = 217
+        end
+        object ejumlahhari: TcxDBMaskEdit
+          Left = 525
+          Top = 32
+          DataBinding.DataField = 'JUMHR'
+          DataBinding.DataSource = dsdata
+          Properties.MaskKind = emkRegExpr
+          Properties.EditMask = '\d+'
+          Properties.MaxLength = 0
+          Style.BorderStyle = ebsFlat
+          TabOrder = 1
+          Width = 97
+        end
+        object edbomsetharian: TcxDBCurrencyEdit
+          Left = 176
+          Top = 32
+          DataBinding.DataField = 'RPOMT'
+          DataBinding.DataSource = dsdata
+          Properties.OnChange = edbomsetharianPropertiesChange
+          Style.BorderStyle = ebsFlat
+          TabOrder = 0
+          OnExit = edbomsetharianExit
+          Width = 217
+        end
+        object edbomsetbulanan: TcxDBCurrencyEdit
+          Left = 176
+          Top = 66
+          DataBinding.DataField = 'RPOMZ'
+          DataBinding.DataSource = dsdata
+          Properties.OnChange = edbomsetbulananPropertiesChange
+          Style.BorderStyle = ebsFlat
+          TabOrder = 2
+          OnExit = edbomsetbulananExit
+          Width = 217
+        end
+        object edbkeringanan: TcxDBMaskEdit
+          Left = 526
+          Top = 66
+          DataBinding.DataField = 'PCRING'
+          DataBinding.DataSource = dsdata
+          Properties.MaskKind = emkRegExpr
+          Properties.EditMask = '\d+'
+          Properties.MaxLength = 0
+          Style.BorderStyle = ebsFlat
+          TabOrder = 4
+          OnExit = edbkeringananExit
+          Width = 35
+        end
+        object cxDatetglomzawal: TcxDateEdit
+          Left = 177
+          Top = 98
+          Style.BorderStyle = ebsFlat
+          TabOrder = 5
+          Width = 217
+        end
+        object cxDatetglomzberakhir: TcxDateEdit
+          Left = 527
+          Top = 98
+          Properties.OnCloseUp = cxDatetglomzberakhirPropertiesCloseUp
+          Style.BorderStyle = ebsFlat
+          TabOrder = 6
+          Width = 217
+        end
+        object cxedtpajak: TcxCurrencyEdit
+          Left = 176
+          Top = 200
+          EditValue = 0.000000000000000000
+          ParentFont = False
+          Properties.Alignment.Horz = taRightJustify
+          Style.Color = clScrollBar
+          Style.Font.Charset = DEFAULT_CHARSET
+          Style.Font.Color = clWindowText
+          Style.Font.Height = -11
+          Style.Font.Name = 'MS Sans Serif'
+          Style.Font.Style = [fsBold]
+          Style.LookAndFeel.Kind = lfFlat
+          Style.IsFontAssigned = True
+          StyleDisabled.LookAndFeel.Kind = lfFlat
+          StyleFocused.LookAndFeel.Kind = lfFlat
+          StyleHot.LookAndFeel.Kind = lfFlat
+          TabOrder = 11
+          Width = 217
+        end
+      end
+      object cxGroupBox3: TcxGroupBox
+        Left = 24
+        Top = 15
+        Anchors = [akLeft, akTop, akRight]
+        Caption = 'Pencarian Data'
+        Style.BorderStyle = ebsFlat
+        Style.LookAndFeel.Kind = lfOffice11
+        Style.LookAndFeel.SkinName = 'Caramel'
+        Style.LookAndFeel.SkinName = 'Caramel'
+        StyleDisabled.LookAndFeel.Kind = lfOffice11
+        StyleDisabled.LookAndFeel.SkinName = 'Caramel'
+        StyleDisabled.LookAndFeel.SkinName = 'Caramel'
+        StyleFocused.LookAndFeel.Kind = lfOffice11
+        StyleFocused.LookAndFeel.SkinName = 'Caramel'
+        StyleFocused.LookAndFeel.SkinName = 'Caramel'
+        StyleHot.LookAndFeel.Kind = lfOffice11
+        StyleHot.LookAndFeel.SkinName = 'Caramel'
+        StyleHot.LookAndFeel.SkinName = 'Caramel'
+        TabOrder = 0
+        Height = 128
+        Width = 911
+        object Label12: TLabel
+          Left = 40
+          Top = 65
+          Width = 83
+          Height = 13
+          Caption = 'Tanggal Pajak'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = [fsBold]
+          ParentFont = False
+          Transparent = True
+        end
+        object Label21: TLabel
+          Left = 43
+          Top = 39
+          Width = 85
+          Height = 13
+          Caption = 'No. Pokok WP'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = [fsBold]
+          ParentFont = False
+          Transparent = True
+        end
+        object Label6: TLabel
+          Left = 38
+          Top = 104
+          Width = 46
+          Height = 13
+          Caption = 'Rekening'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -12
+          Font.Name = 'MS Sans Serif'
+          Font.Style = []
+          ParentFont = False
+          Transparent = True
+        end
+        object lblrekening: TLabel
+          Left = 471
+          Top = 104
+          Width = 55
+          Height = 13
+          Caption = 'Rekening'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = [fsBold]
+          ParentFont = False
+          Transparent = True
+        end
+        object datetahun: TDateTimePicker
+          Left = 176
+          Top = 64
+          Width = 65
+          Height = 21
+          Date = 41393.356848125000000000
+          Format = 'yyyy'
+          Time = 41393.356848125000000000
+          DateMode = dmUpDown
+          TabOrder = 1
+        end
+        object datebulan: TDateTimePicker
+          Left = 251
+          Top = 64
+          Width = 104
+          Height = 21
+          Date = 41275.356848125000000000
+          Format = 'MMMM'
+          Time = 41275.356848125000000000
+          DateMode = dmUpDown
+          TabOrder = 2
+        end
+        object datehari: TDateTimePicker
+          Left = 404
+          Top = 64
+          Width = 65
+          Height = 21
+          Date = 41393.356848125000000000
+          Format = 'dd'
+          Time = 41393.356848125000000000
+          DateMode = dmUpDown
+          TabOrder = 4
+        end
+        object cxButton1: TcxButton
+          Left = 484
+          Top = 61
+          Width = 75
+          Height = 25
+          Caption = '&Cari'
+          TabOrder = 6
+          OnClick = cxButton1Click
+          LookAndFeel.Kind = lfOffice11
+        end
+        object cxhari: TcxCheckBox
+          Left = 381
+          Top = 64
+          TabOrder = 3
+          Width = 22
+        end
+        object enopok: TcxMaskEdit
+          Left = 176
+          Top = 32
+          ParentFont = False
+          Properties.MaskKind = emkRegExpr
+          Properties.EditMask = '\d+'
+          Properties.MaxLength = 0
+          Style.BorderStyle = ebsFlat
+          Style.Font.Charset = DEFAULT_CHARSET
+          Style.Font.Color = clWindowText
+          Style.Font.Height = -12
+          Style.Font.Name = 'MS Sans Serif'
+          Style.Font.Style = []
+          Style.IsFontAssigned = True
+          TabOrder = 0
+          Width = 177
+        end
+        object cxButtonEdit1: TcxButtonEdit
+          Left = 174
+          Top = 96
+          Properties.Buttons = <
+            item
+              Default = True
+              Kind = bkEllipsis
+            end>
+          Properties.MaxLength = 0
+          Properties.OnButtonClick = cxButtonEdit1PropertiesButtonClick
+          TabOrder = 5
+          Width = 225
+        end
+      end
+      object cxGroupBox4: TcxGroupBox
+        Left = 25
+        Top = 576
+        Anchors = [akLeft, akTop, akRight]
+        Caption = 'Dokumentasi Tanggal  '
+        Style.BorderStyle = ebsFlat
+        Style.LookAndFeel.Kind = lfOffice11
+        Style.LookAndFeel.SkinName = 'Caramel'
+        Style.LookAndFeel.SkinName = 'Caramel'
+        StyleDisabled.LookAndFeel.Kind = lfOffice11
+        StyleDisabled.LookAndFeel.SkinName = 'Caramel'
+        StyleDisabled.LookAndFeel.SkinName = 'Caramel'
+        StyleFocused.LookAndFeel.Kind = lfOffice11
+        StyleFocused.LookAndFeel.SkinName = 'Caramel'
+        StyleFocused.LookAndFeel.SkinName = 'Caramel'
+        StyleHot.LookAndFeel.Kind = lfOffice11
+        StyleHot.LookAndFeel.SkinName = 'Caramel'
+        StyleHot.LookAndFeel.SkinName = 'Caramel'
+        TabOrder = 3
+        Visible = False
+        Height = 156
+        Width = 911
+        object Label22: TLabel
+          Left = 32
+          Top = 27
+          Width = 77
+          Height = 13
+          Caption = 'Tgl. Terima SPT'
+          Transparent = True
+        end
+        object Label23: TLabel
+          Left = 32
+          Top = 57
+          Width = 72
+          Height = 13
+          Caption = 'Tgl. Batas SPT'
+          Transparent = True
+        end
+        object Label25: TLabel
+          Left = 32
+          Top = 85
+          Width = 69
+          Height = 13
+          Caption = 'Tgl. Entry SPT'
+          Transparent = True
+        end
+        object Label27: TLabel
+          Left = 32
+          Top = 117
+          Width = 91
+          Height = 13
+          Caption = 'Cara Penghitungan'
+          Transparent = True
+        end
+        object cxDBComboBox6: TcxDBComboBox
+          Left = 164
+          Top = 116
+          DataBinding.DataField = 'CARA'
+          DataBinding.DataSource = dsdata
+          Properties.Items.Strings = (
+            'O'
+            'S')
+          Properties.MaxLength = 0
+          Style.LookAndFeel.Kind = lfFlat
+          StyleDisabled.LookAndFeel.Kind = lfFlat
+          StyleFocused.LookAndFeel.Kind = lfFlat
+          StyleHot.LookAndFeel.Kind = lfFlat
+          TabOrder = 3
+          Width = 102
+        end
+        object cxDateterimaspt: TcxDateEdit
+          Left = 164
+          Top = 26
+          Style.BorderStyle = ebsFlat
+          TabOrder = 0
+          Width = 177
+        end
+        object cxDatebatasspt: TcxDateEdit
+          Left = 164
+          Top = 55
+          Style.BorderStyle = ebsFlat
+          TabOrder = 1
+          Width = 177
+        end
+        object cxDateentryspt: TcxDateEdit
+          Left = 164
+          Top = 82
+          Style.BorderStyle = ebsFlat
+          TabOrder = 2
+          Width = 177
+        end
+      end
+    end
+  end
+  object Panel3: TPanel
+    Left = 0
+    Top = 611
+    Width = 1020
+    Height = 29
+    Align = alBottom
+    BevelInner = bvLowered
+    BevelOuter = bvNone
+    TabOrder = 1
+    object btsimpan: TcxButton
+      Left = 4
+      Top = 1
+      Width = 75
+      Height = 25
+      Caption = '&Baru'
+      TabOrder = 0
+      OnClick = btsimpanClick
+      LookAndFeel.Kind = lfOffice11
+    end
+    object btkeluar: TcxButton
+      Left = 190
+      Top = 1
+      Width = 95
+      Height = 25
+      Caption = '&Keluar'
+      TabOrder = 1
+      OnClick = btkeluarClick
+      CanBeFocused = False
+      LookAndFeel.Kind = lfOffice11
+    end
+    object btcetak: TcxButton
+      Left = 87
+      Top = 1
+      Width = 97
+      Height = 25
+      Caption = '&Cetak Kartu'
+      TabOrder = 2
+      CanBeFocused = False
+      LookAndFeel.Kind = lfOffice11
+    end
+  end
+  object zqdataview: TZQuery
+    Connection = formutama.conn_record
+    Params = <>
+    Left = 575
+    Top = 22
+  end
+  object dsdata: TDataSource
+    DataSet = dm.ZQpendataan
+    OnStateChange = dsdataStateChange
+    Left = 672
+    Top = 81
+  end
+  object Zqtabbdu: TZQuery
+    Connection = formutama.conn_record
+    Params = <>
+    Left = 631
+    Top = 30
+  end
+end
